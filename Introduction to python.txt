@@ -1,0 +1,25 @@
+Find average marks(3 subjects)
+code:
+a = int(input())
+b = int(input())
+c = int(input())
+print((a+b+c)/3)
+
+----------------------------------------------------------------------------
+Arithmatic progression: You are given first three entries of an arithmetic progression. You have to calculate the common difference and print it.
+Code:
+a = int(input())
+b = int(input())
+c = int(input())
+d1 = b - a
+print(d1)
+
+-----------------------------------------------------------------------
+Rectangular Area: 
+Code
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+area = (x2-x1)*(y2-y1)
+print(area)
