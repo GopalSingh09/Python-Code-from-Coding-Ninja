@@ -1,0 +1,125 @@
+Number Pattern 1
+Problem statement
+Print the following pattern for the given N number of rows.
+
+Pattern for N = 4
+1
+11
+111
+1111
+
+Code:
+n = int(input())
+i = 1
+while(i<=n):
+    j = 1
+    while(j<=i):
+        print(1, end="")
+        j+=1
+    print()
+    i+=1
+---------------------------------------------------------------------------------------------------------------------
+Number pattern 2
+Problem statement
+Print the following pattern for the given N number of rows.
+
+Pattern for N = 4
+1
+11
+202
+3003
+
+Code:
+
+n = int(input())
+i = 1
+while(i<=n):
+    j = 1
+    k = i-1
+    count = 0
+    while(j<=i):
+        if i>=3:
+            x = i//2
+            if count == 0 or count ==i-1:
+                print(k, end="")
+                count = j
+            else:
+                print("0", end="")
+                count = j
+        else:
+            print(1, end="")
+        j+=1    
+    print()
+    i+=1
+---------------------------------------------------------------------------------------------------------------------
+Number pattern3 
+Problem statement
+Print the following pattern for the given N number of rows.
+
+Pattern for N = 4
+1
+11
+121
+1221
+
+Code:
+n = int(input())
+i = 1
+while(i<=n):
+    j = 1
+    count = 0
+    while(j<=i):
+        if i>=3:
+            x = i//2
+            if count == 0 or count == i-1:
+                print(1, end="")
+                count = j
+            else:
+                print("2", end="")
+                count = j
+        else:
+            print("1", end="")
+        j+=1
+    print()
+    i+=1
+---------------------------------------------------------------------------------------------------------------------
+Number patter 4
+Problem statement
+Print the following pattern for the given N number of rows.
+
+Pattern for N = 4
+1234
+123
+12
+1
+
+Code:
+n = int(input())
+i = n
+while(i!=0):
+    j = 1
+    while(j<=i):
+        print(j, end="")
+        j+=1
+    print()
+    i-=1
+---------------------------------------------------------------------------------------------------------------------
+Alpha patterProblem statement
+Print the following pattern for the given N number of rows.
+
+Pattern for N = 3
+ A
+ BB
+ CCC
+
+ Code:
+ n = int(input())
+i = 1
+x = ord('A')-1
+while(i<=n):
+    j = 1
+    while(j<=i):
+        print(chr(x+i), end="")
+        j+=1
+    print()
+    i+=1

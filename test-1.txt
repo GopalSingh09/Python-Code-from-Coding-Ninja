@@ -1,0 +1,100 @@
+----------------------------------------------------------------------------------------------------------------------------
+Number star pattern 1
+Problem statement
+Print the following pattern for given number of rows.
+
+Detailed explanation ( Input/output format, Notes, Images )
+Sample Input :
+   5
+Sample Output :
+ 5432*
+ 543*1
+ 54*21
+ 5*321
+ *4321
+
+ Code:
+ n = int(input())
+i = 1
+while(i<=n):
+    j = 1
+    k = n
+    while(j<=n):
+        if k == i:
+            print("*",end="")
+        else:
+            print(k,end="")
+        k-=1
+        j+=1
+    print()
+    i+=1
+----------------------------------------------------------------------------------------------------------------------------
+Yet Another patternProblem statement
+Ninja was playing with her sister to solve a puzzle pattern. However, even after taking several hours, they could not solve the problem.
+
+A value of N is given to them, and they are asked to solve the problem. Since they are stuck for a while, they ask you to solve the problem. Can you help solve this problem?
+
+Example : Pattern for N = 4
+
+****
+ ***     
+  **
+   *
+
+Code:
+def ninjaPuzzle(n):
+    i = 1
+    while(i<=n):
+            space = 0
+            while(space<i-1):
+                print(" ",end="")
+                space+=1
+            j = 1
+            while(j<=n-space):
+                print("*",end="")
+                j+=1
+            print()
+            i+=1
+t = int(input())
+for i in range(t):
+    n = int(input())
+    ninjaPuzzle(n)
+    if i == t-1:
+        exit()
+----------------------------------------------------------------------------------------------------------------------------
+Greatest common divisor
+Problem statement
+You are given two numbers, ‘X’ and ‘Y’. Your task is to find the greatest common divisor of the given two numbers.
+
+The Greatest Common Divisor of any two integers is the largest number that divides both integers.
+
+For Example:
+You are given ‘X’ as 20 and ‘Y’ as 15. The greatest common divisor, which divides both 15 and 20, is 5. Hence the answer is 5.
+
+Code:
+def findGcd(x, y):
+    i=1
+    check = 0
+    if x<=y:
+        while(i<=x):
+            if x%i==0 and y%i==0:
+                if i>check:
+                    check = i
+            i+=1
+        print(check)
+    elif y<=x:
+        while(i<=y):
+            if x%i==0 and y%i==0:
+                if i>check:
+                    check = i
+            i+=1
+        print(check)
+
+t = int(input())
+for i in range(t):
+    x,y = input().split()
+    findGcd(int(x), int(y))
+    if i == t-1:
+        exit()
+
+
